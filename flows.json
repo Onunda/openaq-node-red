@@ -1,0 +1,448 @@
+[
+    {
+        "id": "83835e17.47d5c",
+        "type": "tab",
+        "label": "Fetching data",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "7a7b75e8de69c281",
+        "type": "tab",
+        "label": "preprocessing",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8b4c0c1fde8cdec8",
+        "type": "tab",
+        "label": "Dashboard",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c41a9ccd6d5fe079",
+        "type": "JsonWebToken_config",
+        "name": "",
+        "secret": ""
+    },
+    {
+        "id": "9bb81ec8.f0e8",
+        "type": "ui_group",
+        "name": "first",
+        "tab": "87421376.e60d3",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4d954475.f5a4ec",
+        "type": "ui_group",
+        "name": "location",
+        "tab": "87421376.e60d3",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "87421376.e60d3",
+        "type": "ui_tab",
+        "name": "Dashboard",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "be0e5751a3ea21fc",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "54e577b8a83ad81e",
+        "type": "ui_group",
+        "name": "chart",
+        "tab": "87421376.e60d3",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "80cd16c2506e7e13",
+        "type": "inject",
+        "z": "83835e17.47d5c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 80,
+        "wires": [
+            [
+                "afaa8bf93fa17763"
+            ]
+        ]
+    },
+    {
+        "id": "afaa8bf93fa17763",
+        "type": "openaq-latest",
+        "z": "83835e17.47d5c",
+        "aqconfig": "",
+        "location": "",
+        "city": "Roma",
+        "country": "IT",
+        "latitude": "",
+        "longitude": "",
+        "radius": 2500,
+        "orderby_location": true,
+        "sort_location": "asc",
+        "orderby_city": false,
+        "sort_city": null,
+        "orderby_country": false,
+        "sort_country": null,
+        "orderby_distance": false,
+        "sort_distance": null,
+        "parameter": "",
+        "hasGeo": false,
+        "limit": 100,
+        "page": 1,
+        "name": "",
+        "x": 250,
+        "y": 140,
+        "wires": [
+            [
+                "3e56f5758990f5d4"
+            ]
+        ]
+    },
+    {
+        "id": "3e56f5758990f5d4",
+        "type": "function",
+        "z": "83835e17.47d5c",
+        "name": "function 1",
+        "func": "let locations=[];\nlet results = msg.payload.results;\nresults.forEach(obj=> {\n    locations.push(obj.location)\n});\nreturn { options: locations };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 220,
+        "wires": [
+            [
+                "39fe9fb5232b29de"
+            ]
+        ]
+    },
+    {
+        "id": "39fe9fb5232b29de",
+        "type": "ui_dropdown",
+        "z": "83835e17.47d5c",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "4d954475.f5a4ec",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 380,
+        "y": 300,
+        "wires": [
+            [
+                "306e4daa04418ea5"
+            ]
+        ]
+    },
+    {
+        "id": "306e4daa04418ea5",
+        "type": "function",
+        "z": "83835e17.47d5c",
+        "name": "function 2",
+        "func": "let location = msg.payload;\nreturn {location: location};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 380,
+        "wires": [
+            [
+                "f538c83863801dc8"
+            ]
+        ]
+    },
+    {
+        "id": "f538c83863801dc8",
+        "type": "openaq-latest",
+        "z": "83835e17.47d5c",
+        "aqconfig": "",
+        "location": null,
+        "city": null,
+        "country": null,
+        "latitude": null,
+        "longitude": null,
+        "radius": 2500,
+        "orderby_location": true,
+        "sort_location": "asc",
+        "orderby_city": false,
+        "sort_city": null,
+        "orderby_country": false,
+        "sort_country": null,
+        "orderby_distance": false,
+        "sort_distance": null,
+        "parameter": null,
+        "hasGeo": false,
+        "limit": 100,
+        "page": 1,
+        "name": null,
+        "x": 630,
+        "y": 380,
+        "wires": [
+            [
+                "726d75e8191435dd"
+            ]
+        ]
+    },
+    {
+        "id": "726d75e8191435dd",
+        "type": "link out",
+        "z": "83835e17.47d5c",
+        "name": "Data",
+        "mode": "link",
+        "links": [
+            "a39721b6c8ff4d59"
+        ],
+        "x": 685,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "a39721b6c8ff4d59",
+        "type": "link in",
+        "z": "7a7b75e8de69c281",
+        "name": "link in 1",
+        "links": [
+            "726d75e8191435dd"
+        ],
+        "x": 145,
+        "y": 80,
+        "wires": [
+            [
+                "11306243b4d6d1d8"
+            ]
+        ]
+    },
+    {
+        "id": "11306243b4d6d1d8",
+        "type": "function",
+        "z": "7a7b75e8de69c281",
+        "name": "function 3",
+        "func": "let results = msg.payload.results[0]\nlet measurements = results.measurements\n\nlet obj = {}\nobj.data = [[]]\nobj.labels = []\nobj.series = [\"value\"];\n\nmeasurements.forEach(o=>{\n    obj.data[0].push(o.value);\n    obj.labels.push(o.parameter);\n})\nreturn {payload: [obj],topic: msg.topic};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 80,
+        "wires": [
+            [
+                "2d4b6f1081eca317"
+            ]
+        ]
+    },
+    {
+        "id": "2d4b6f1081eca317",
+        "type": "link out",
+        "z": "7a7b75e8de69c281",
+        "name": "data for dashboard",
+        "mode": "link",
+        "links": [
+            "8e1fd84b5f1ce4ec"
+        ],
+        "x": 445,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "8e1fd84b5f1ce4ec",
+        "type": "link in",
+        "z": "8b4c0c1fde8cdec8",
+        "name": "link in 2",
+        "links": [
+            "2d4b6f1081eca317"
+        ],
+        "x": 175,
+        "y": 100,
+        "wires": [
+            [
+                "48f181045736dcc5"
+            ]
+        ]
+    },
+    {
+        "id": "48f181045736dcc5",
+        "type": "ui_chart",
+        "z": "8b4c0c1fde8cdec8",
+        "name": "",
+        "group": "54e577b8a83ad81e",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "label": "chart",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "500",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 370,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    }
+]
